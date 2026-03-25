@@ -1,0 +1,5 @@
+nome= str(input('Digite seu nome: ')).strip()
+palavras = nome.split()
+print('Muito prazer em te conhecer!')
+print(f'Seu primeiro nome é: {palavras[0]}')
+print(f'Seu ultimo nome é:{palavras[len(palavras)-1]} ')
