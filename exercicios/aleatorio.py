@@ -1,13 +1,24 @@
-lista = []
-def media_aluno(nome,nota1,nota2):
-    media = (nota1 + nota2) / 2
-    print(f'O aluno {nome} teve média {media}')
+from random import randint
 
-for c in range(0,3):
-    nome = str(input('Nome: '))
-    nota1 = float(input(f'Primeira nota de {nome}: '))
-    nota2 = float(input(f'Segunda nota de {nome}: '))
-    media_aluno(nome, nota1,nota2)
-    lista.append(media_aluno)
+def sorteio(valores):
+    for cont in range(0,10):
+        valor = randint(1,50)
+        valores.append(valor)
+    print(f'Valores sorteados:', end=' ')
+    for v in valores:
+        print(f'{v}', end=' ')
 
-print(lista)
+def analise(valores):
+    contapar = contimpar = 0
+    for v in valores:
+        if v % 2 == 0:
+            contapar += 1
+        else:
+            contimpar += 1
+    print()
+    print(f'temos {contapar} valores pares')
+    print(f'Temos {contimpar} valores impares')
+
+valores = []
+sorteio(valores)
+analise(valores)

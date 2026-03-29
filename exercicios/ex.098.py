@@ -8,7 +8,6 @@ def contador(i, f, p):
     if p == 0:
         p = 1 
 
-
     if i < f:
         cont = i
         while cont <=f:
