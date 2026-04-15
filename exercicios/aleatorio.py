@@ -1,17 +1,17 @@
-def aluno(nome="<desconhecido>", nota=0):
-    print(f'O aluno {nome} tirou a nota {nota}.')
+def idadeMaior(msg):
+    ok = False
+    valor = 0
+    while True:
+        i = input(msg)
+        if i.isnumeric():
+            valor = int(int)
+            if 0 <= i <= 200:
+                ok = True
+            else:
+                print('Idade invalida, tente novamente.')
+        if ok:
+            break
+    return valor
 
-
-
-
-a = input('Nome do aluno: ')
-n = input(f'Nota de {a}: ')
-
-if n.isnumeric():
-    n = int(n)
-else:
-    n = 0
-if a.strip() == '':
-    aluno(nota=n)
-else:
-    aluno(a, n)
+i = idadeMaior('Digite sua idade: ')
+print(f'Você tem {i} anos.')
