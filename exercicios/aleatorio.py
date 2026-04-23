@@ -1,17 +1,16 @@
-def idadeMaior(msg):
-    ok = False
-    valor = 0
+def leiaNota(msg):
+    ok =False
+    nota = 0
     while True:
-        i = input(msg)
-        if i.isnumeric():
-            valor = int(int)
-            if 0 <= i <= 200:
+        n = input(msg)
+        if n.isnumeric():
+            nota = int(n)
+            if 0 <= n <= 10:
                 ok = True
             else:
-                print('Idade invalida, tente novamente.')
+                print('Nota invalida. Tente novamente!')
         if ok:
             break
-    return valor
-
-i = idadeMaior('Digite sua idade: ')
-print(f'Você tem {i} anos.')
+        return nota
+n = leiaNota('Digite sua nota: ')
+print(f'Sua nota foi {n}')

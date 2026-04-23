@@ -1,16 +1,17 @@
-def leiaInt(msg):
-    ok = False
-    valor = 0
+def idadeMaior(msg):        #funcao
+    ok = False              # variavel de controle
+    valor = 0               # variavel de aramazenamento de valor
     while True:
-        n = str(input(msg))
-        if n.isnumeric():
-            valor = int(n)
-            ok = True
-        else:
-            print('ERRO! Número invalido! Tente novamente')
+        i = input(msg)
+        if i.isnumeric():
+            valor = int(i)
+            if 0 <= valor <= 200:
+                ok = True
+            else:
+                print('Idade invalida, tente novamente.')
         if ok:
             break
     return valor
 
-n = leiaInt('Digite um número: ')
-print(f'Você acabou de digitar o valor {n}')
+i = idadeMaior('Digite sua idade: ')
+print(f'Você tem {i} anos.')
