@@ -2,7 +2,6 @@ def ajuda(com):
     help(com)
 
 
-
 def titulo(msg, cor):
     tam = len(msg)
     print('~' * tam)
